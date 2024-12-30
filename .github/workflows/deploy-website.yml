@@ -20,7 +20,7 @@ jobs:
         npm run export  # Export the static files (for static hosting)
 
     - name: Deploy to Hostinger via FTP
-      uses: SamKirkland/FTP-Deploy-Action@4.5.0
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
         server: ${{ secrets.FTP_HOST }}
         username: ${{ secrets.FTP_USERNAME }}
