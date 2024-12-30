@@ -13,11 +13,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install dependencies and build
+    - name: Install dependencies
       run: |
         npm install
+
+    - name: Build and export the app
+      run: |
         npm run build
-        npm run export  # Export the static files (for static hosting)
 
     - name: Deploy to Hostinger via FTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
