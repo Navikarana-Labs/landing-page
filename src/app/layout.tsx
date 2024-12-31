@@ -8,11 +8,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Navikarana Labs",
+  title: "Navīkaraṇa Labs",
   description: "Landing page for official website of Navīkaraṇa Labs.",
   icons: [
-    { media: "(prefers-color-scheme: light)", url: "/favicon-lightmode.ico", href: "/favicon-lightmode.ico" },
-    { media: "(prefers-color-scheme: dark)", url: "/favicon-darkmode.ico", href: "/favicon-darkmode.ico" },
+    {
+      media: "(prefers-color-scheme: light)",
+      url: "/favicon-lightmode.ico",
+      href: "/favicon-lightmode.ico",
+    },
+    {
+      media: "(prefers-color-scheme: dark)",
+      url: "/favicon-lightmode.ico",
+      href: "/favicon-lightmode.ico",
+    },
   ],
 };
 
