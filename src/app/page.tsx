@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
-import { MdAlternateEmail } from "react-icons/md";
 import { useState } from "react";
 
 const Home = () => {
