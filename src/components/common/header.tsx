@@ -8,25 +8,22 @@ export const Header: React.FC = () => {
       <div className="container h-14 md:h-16 w-full flex max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/logo-lightmode.svg"
-            alt="navikarana labs logo"
-            width={275}
-            height={55}
-            className="hidden md:block"
-          />
-          <Image
             src="/logomark-lightmode.svg"
             alt="navikarana labs logo"
             width={46}
             height={46}
-            className="block md:hidden"
+            className="hidden md:block"
           />
+          <h1 className="text-3xl md:text-3xl font-medium">Navīkaraṇa Labs</h1>
         </Link>
         <nav className="flex items-center gap-5 text-base font-medium">
           {/* <Link href="/about" className="transition-colors hover:text-primary text-muted-foreground">
             About
           </Link> */}
-          <a href="mailto:hello@navikarana.io" className="transition-colors hover:text-primary text-muted-foreground">
+          <a
+            href="mailto:hello@navikarana.io"
+            className="transition-colors hover:text-primary text-muted-foreground"
+          >
             Contact Us
           </a>
         </nav>
