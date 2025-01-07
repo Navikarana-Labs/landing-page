@@ -59,7 +59,7 @@ export const WaitListForm: React.FC = () => {
   };
   return (
     <form onSubmit={handleSubmit} className="w-full flex flex-col items-center justify-center">
-      <div className="w-full md:w-96 flex flex-col md:flex-row gap-2 md:gap-0 items-center">
+      <div className="w-full md:w-[28rem] flex flex-col md:flex-row gap-2 md:gap-0 items-center">
         <input
           type="email"
           name="email"
@@ -67,7 +67,7 @@ export const WaitListForm: React.FC = () => {
           placeholder="Enter your email. We don't spam!"
           required
           readOnly={formSubmitting}
-          className="w-full border-2 border-accent/75 rounded-md md:rounded-none md:rounded-l-md px-3 py-1.5 focus-visible:outline-none focus-visible:border-accent disabled:cursor-not-allowed disabled:opacity-50 transition-colors placeholder:text-muted-foreground"
+          className="w-full border-2 md:border-r-0 border-accent/75 rounded-md md:rounded-none md:rounded-l-md px-3 py-1.5 focus-visible:outline-none focus-visible:border-accent disabled:cursor-not-allowed disabled:opacity-50 transition-colors placeholder:text-muted-foreground"
         />
         <button
           type="submit"
