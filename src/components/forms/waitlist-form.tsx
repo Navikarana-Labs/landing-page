@@ -34,31 +34,44 @@ export const WaitListForm: React.FC = () => {
     const email = form.email.value;
 
     if (!email || !EMAIL_REGEX.test(email)) {
-      setStatus({ type: "error", message: "Please enter a valid email to join our wait list." });
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email to join our wait list.",
+      });
       return;
     }
 
     try {
       setFormSubmitting(true);
 
-      const { data } = await axios.post("YOUR_GOOGLE_APPS_SCRIPT_URL", { email });
+      const { data } = await axios.post(
+        "https://server.navikarana.io/api/add-to-waitlist",
+        { email },
+      );
       console.info("Wait list joining successful: ", { data });
 
-      setStatus({ type: "success", message: "You're on board! 🚀 Expect something amazing in your inbox soon." });
+      setStatus({
+        type: "success",
+        message:
+          "You're on board! 🚀 Expect something amazing in your inbox soon.",
+      });
       form.reset();
     } catch (error: unknown) {
-      // console.error("Error submitting wait list form: ", { error });
-      console.info("Error submitting wait list form: ", { error });
-      // const message = parseError(error);
+      console.error("Error submitting wait list form: ", { error });
 
-      // setStatus({ type: "error", message });
-      setStatus({ type: "success", message: "You're on board! 🚀 Expect something amazing in your inbox soon." });
+      setStatus({
+        type: "error",
+        message: "Something went wrong. Try again later.",
+      });
     } finally {
       setFormSubmitting(false);
     }
   };
   return (
-    <form onSubmit={handleSubmit} className="w-full flex flex-col items-center justify-center">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full flex flex-col items-center justify-center"
+    >
       <div className="w-full md:w-[28rem] flex flex-col md:flex-row gap-2 md:gap-0 items-center">
         <input
           type="email"
@@ -78,10 +91,13 @@ export const WaitListForm: React.FC = () => {
         </button>
       </div>
       <p
-        className={cn("mt-2 text-center min-h-6 text-sm md:text-base text-balance font-normal", {
-          "text-destructive": status.type === "error",
-          "text-success": status.type === "success",
-        })}
+        className={cn(
+          "mt-2 text-center min-h-6 text-sm md:text-base text-balance font-normal",
+          {
+            "text-destructive": status.type === "error",
+            "text-success": status.type === "success",
+          },
+        )}
       >
         {status.message}
       </p>
