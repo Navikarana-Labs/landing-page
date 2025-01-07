@@ -10,7 +10,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: "Navīkaraṇa Labs",
-  description: "Landing page for official website of Navīkaraṇa Labs.",
+  description: "Landing page for Navīkaraṇa Labs.",
   icons: [
     {
       media: "(prefers-color-scheme: light)",

@@ -1,3 +1,5 @@
 # Navīkaraṇa Labs
 
-Landing page for official website of Navīkaraṇa Labs.
+Landing page for Navīkaraṇa Labs.
+
+Live at: https://navikarana.io
