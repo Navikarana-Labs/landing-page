@@ -37,7 +37,20 @@
   }
 
   body {
+    /* Prefer Geist, then Noto Sans (latin-ext), then safe system stack */
+    font-family: var(--font-geist), var(--font-noto),
+      ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, "Noto Sans",
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
     @apply bg-background text-foreground font-light tracking-wide;
+
+    /* Sane rendering defaults */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    /* Hide scrollbars (your existing rules) */
     scrollbar-width: 0;
     -ms-overflow-style: none;
   }
@@ -46,6 +59,7 @@
     display: none;
   }
 }
+
 .container {
   width: 100%;
   margin-right: auto;

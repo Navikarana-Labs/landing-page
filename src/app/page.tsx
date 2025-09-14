@@ -35,7 +35,7 @@ const Home = () => {
         </h2>
         <div className="flex items-center gap-5 justify-center">
           <a
-            href="https://x.com/navikarana_labs"
+            href="https://x.com/navikarana_io"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg md:text-xl"
