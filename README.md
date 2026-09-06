@@ -4,7 +4,7 @@ Independent research and engineering. Live at https://navikarana.io.
 
 ## Local Preview
 
-Plain HTML and CSS, with no JavaScript, dependencies, or build step. Serve the repository root:
+Plain HTML and CSS, with one small vanilla JavaScript file for theme switching. No dependencies or build step. Serve the repository root:
 
 ```sh
 python3 -m http.server 8000
@@ -19,11 +19,19 @@ Visit http://localhost:8000. Pages can also be opened directly: asset paths are 
 - `updates/index.html`: chronological lab updates, newest first.
 - `about/index.html`: lab background and relationship to Lokesh.
 - `assets/css/main.css`: shared styles, variables, responsive layout, and self-hosted font declarations.
-- `assets/images/favicon.svg`: simplified orange-only version of the logo for browser tabs.
-- `assets/images/favicon.ico`: 16, 32, and 48 pixel fallback derived from the SVG.
-- `public/`: preserved original logo, original favicon (no longer used), and Geist fonts.
+- `assets/js/main.js`: light/dark switch and saved preference, with light mode as the default.
+- `assets/images/`: earlier simplified favicon variants, no longer referenced by the site.
+- `public/`: supplied full header logos, standalone logomarks, light/dark ICO favicons, and self-hosted Geologica fonts with their license.
+
+## Typography
+
+The logo lettering matches **Geologica Regular (400)**, identified by comparing its SVG outlines with the font's glyph geometry. The entire site uses Geologica, including navigation, headings, prose, dates, labels, and buttons. The original SVG logos remain unchanged.
+
+The variable WOFF2 files cover weights 100 through 900 and are served locally. Latin and extended Latin subsets preserve the accented characters in Navikarana's name. The font is distributed under the SIL Open Font License in `public/geologica-OFL.txt`. Source: [Geologica](https://github.com/googlefonts/geologica), with webfont subsets from [Google Fonts](https://fonts.google.com/specimen/Geologica). No runtime font requests go to Google. The former Geist files and monospace font overrides have been removed.
 
 ## Manual Maintenance
+
+The site defaults to light mode until a visitor chooses Dark using the top-right button. The choice is saved in local storage across pages and visits. With JavaScript disabled, the site stays in light mode and the switch is hidden. The supplied full-logo SVGs are used unchanged in the header, and standalone logomarks remain in the homepage hero. The favicon switches between `public/favicon-lightmode.ico` and `public/logomark-darkmode.ico` with the selected theme.
 
 Headers and footers are deliberately duplicated across four small HTML files. Apply shared navigation or contact changes to all four. The copyright year is plain HTML: update it annually rather than loading JavaScript just for a date.
 
@@ -33,11 +41,7 @@ To add an update, duplicate the `li.update-entry` in `updates/index.html` and pl
 
 When a real project is ready, replace the work page's placeholder with an `article.project-entry`. Use `project-meta` for its ID, year, status, and optional field; `project-title` on its heading; ordinary paragraphs for its description; and `project-links` for GitHub, technical notes, or a project website. Do not publish placeholder projects.
 
-The favicon is independent of the original logo. To regenerate the ICO after changing the SVG, use ImageMagick if installed (this is an optional asset-maintenance command, not a site build step):
-
-```sh
-convert -background none assets/images/favicon.svg -define icon:auto-resize=48,32,16 assets/images/favicon.ico
-```
+To update the active favicons, replace the supplied ICO files in `public/`. The earlier generated variants in `assets/images/` are not used.
 
 ## Deployment
 
