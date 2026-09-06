@@ -40,7 +40,7 @@ const Home = () => {
             <FaGithub />
           </a>
           <a
-            href="https://x.com/navikarana_io"
+            href="mailto:hello@navikarana.io"
             target="_blank"
             rel="noopener noreferrer"
             className="text-lg md:text-xl"
