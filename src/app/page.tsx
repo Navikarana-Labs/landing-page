@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaEnvelope } from "react-icons/fa6";
 
 const Home = () => {
   return (
@@ -30,18 +30,7 @@ const Home = () => {
       </section>
             */}
       <section className="mt-6 flex flex-col justify-center items-center gap-2">
-        <h2 className="text-base md:text-lg mb-2 font-medium text-foreground border-b border-current">
-          Follow us on
-        </h2>
         <div className="flex items-center gap-5 justify-center">
-          <a
-            href="https://x.com/navikarana_io"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg md:text-xl"
-          >
-            <FaXTwitter />
-          </a>
           <a
             href="https://github.com/Navikarana-Labs"
             target="_blank"
@@ -49,6 +38,14 @@ const Home = () => {
             className="text-lg md:text-xl"
           >
             <FaGithub />
+          </a>
+          <a
+            href="https://x.com/navikarana_io"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg md:text-xl"
+          >
+            <FaEnvelope />
           </a>
         </div>
       </section>
