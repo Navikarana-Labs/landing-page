@@ -19,14 +19,14 @@ Visit http://localhost:8000. Pages can also be opened directly: asset paths are 
 - `updates/index.html`: chronological lab updates, newest first.
 - `about/index.html`: lab background and relationship to Lokesh.
 - `styles.css`: shared styles, variables, responsive layout, and self-hosted font declarations.
-- `public/`: supplied light-mode full header logo, standalone logomark, and self-hosted Geologica fonts with their license.
+- `public/`: supplied light-mode full header logo, standalone logomark, and self-hosted Audiowide fonts with their license.
 - `public/favicon/`: supplied PNG icons in 16, 32, 64, 192, and 512 pixel sizes, plus `site.webmanifest`.
 
 ## Typography
 
-The logo lettering matches **Geologica Regular (400)**, identified by comparing its SVG outlines with the font's glyph geometry. The entire site uses Geologica, including navigation, headings, prose, dates, and labels. Text sizes have been reduced by 10% from the initial Geologica layout; logo sizes and layout spacing are unchanged. The retained original SVG logos remain unchanged.
+The entire site uses **Audiowide Regular (400)**, including navigation, headings, prose, dates, and labels. Audiowide has a single regular weight; synthetic bold and italic are disabled. The supplied SVG logos remain unchanged, as their lettering is part of the image rather than live text.
 
-The variable WOFF2 files cover weights 100 through 900 and are served locally. Latin and extended Latin subsets preserve the accented characters in Navikarana's name. The font is distributed under the SIL Open Font License in `public/geologica-OFL.txt`. Source: [Geologica](https://github.com/googlefonts/geologica), with webfont subsets from [Google Fonts](https://fonts.google.com/specimen/Geologica). No runtime font requests go to Google. The former Geist files and monospace font overrides have been removed.
+The Latin and extended Latin WOFF2 subsets are served locally. Source: [Audiowide on Google Fonts](https://fonts.google.com/specimen/Audiowide). Audiowide is distributed under the SIL Open Font License 1.1, which allows commercial use and self-hosting. Keep `public/audiowide-OFL.txt` with the font files when deploying or distributing the site; no visible footer attribution is required. No runtime font requests go to Google. Previous font files and their font-specific licenses have been removed; the site's root `LICENSE` is separate and unchanged.
 
 ## Manual Maintenance
 
