@@ -4,7 +4,7 @@ Independent research and engineering. Live at https://navikarana.io.
 
 ## Local Preview
 
-Plain HTML and CSS, with no JavaScript, dependencies, or build step. Serve the repository root:
+Plain HTML and CSS with a small Contact-page copy script, no dependencies, and no build step. Serve the repository root:
 
 ```sh
 python3 -m http.server 8000
@@ -18,6 +18,7 @@ Visit http://localhost:8000. Pages can also be opened directly: asset paths are 
 - `projects/index.html`: project publication status and links to existing work.
 - `about/index.html`: lab background and relationship to Lokesh.
 - `contact/index.html`: contact details for collaborations, projects, and research.
+- `contact/copy.js`: copy-link and copy-email buttons with animated confirmation. Requires clipboard support over HTTPS or localhost; links still work without JavaScript.
 - `styles.css`: shared styles, variables, responsive layout, and self-hosted font declarations.
 - `public/`: supplied light-mode full header logo, standalone logomark, and self-hosted font assets and licenses.
 - `public/favicon/`: supplied PNG icons in 16, 32, 64, 192, and 512 pixel sizes, plus `site.webmanifest`.

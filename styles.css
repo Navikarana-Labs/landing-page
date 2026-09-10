@@ -94,9 +94,24 @@ h1 { font-size: clamp(37.8px, 5.49vw, 70.2px); line-height: 1.08; letter-spacing
 .page-heading h1 { margin-top: 0; }
 .page-body { padding-bottom: 68px; }
 .prose p + p { margin-top: 24px; }
+.contact-details p + p { margin-top: 28px; }
 .prose { max-width: 630px; font-size: 16.2px; line-height: 1.75; overflow-wrap: break-word; }
 .contact-email { display: inline-block; font-weight: 600; text-decoration-color: var(--accent); text-decoration-thickness: 2px; }
 .contact-email:hover { text-decoration-color: var(--fg); }
+.copy-button { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; margin-left: 4px; padding: 0; vertical-align: middle; border: 0; border-radius: 4px; background: transparent; color: var(--muted); cursor: pointer; }
+.copy-button[hidden] { display: none; }
+.copy-button:hover, .copy-button.is-copied { color: var(--accent); }
+.copy-button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.copy-icon, .copy-check { transform-origin: center; transition: opacity 180ms ease, transform 180ms ease; }
+.copy-check { opacity: 0; transform: scale(0.6); }
+.is-copied .copy-icon { opacity: 0; transform: scale(0.6); }
+.is-copied .copy-check { opacity: 1; transform: scale(1); }
+.copy-status { font-size: 12.6px; color: var(--muted); }
+.copy-status:not(:empty) { margin-top: 12px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-icon, .copy-check { transition: none; }
+}
 
 .site-footer { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; gap: 32px; padding-block: 20px 24px; margin-top: 24px; border-top: 1px solid #b8b5af; background: var(--bg); color: var(--muted); font-size: 10.8px; }
 .footer-brand { color: var(--fg); font-size: 12.6px; font-weight: 400; margin-bottom: 5px; }
