@@ -1,28 +1,13 @@
-# Navīkaraṇa Labs
+# Navikarana Labs
 
-Landing page for Navīkaraṇa Labs.
+Independent research and engineering. Live at https://navikarana.io.
 
-Live at: https://navikarana.io
+### Local Preview
 
-## Local Preview
-
-This site uses plain HTML, CSS, and JavaScript. No dependencies or build step are required.
-
-Open `index.html` directly in a browser, or serve the project directory:
+Plain HTML and CSS with a small Contact-page copy script. No dependencies or build step.
 
 ```sh
-python3 -m http.server 8000
+python3 preview.py
 ```
 
-Then visit http://localhost:8000.
-
-## Files
-
-- `index.html`: page content, metadata, and social icons.
-- `styles.css`: layout, responsive styles, and self-hosted Geist fonts.
-- `script.js`: updates the copyright year.
-- `public/`: logo, favicon, and font files.
-
-## Deployment
-
-Upload `index.html`, `styles.css`, `script.js`, and `public/` to any static web host. Use the project root as the publish directory with no build command. Asset paths also support hosting in a subdirectory.
+Then open http://localhost:8000.
